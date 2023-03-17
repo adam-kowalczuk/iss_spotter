@@ -9,11 +9,11 @@ const { fetchMyIP, fetchCoordsByIP } = require('./iss');
 //   console.log('It worked! Returned IP:' , ip);
 // });
 
-fetchCoordsByIP('172.218.227.87', (error, data) => {
-  if (error) {
-    console.log("It didn't work!", error);
-    return;
-  }
+// fetchCoordsByIP('172.218.227.87', (error, data) => {
+//   if (error) {
+//     console.log("It didn't work!", error);
+//     return;
+//   }
 
-  console.log("It worked! Returned Geocode:", data);
-})
+//   console.log("It worked! Returned Geocode:", data);
+// });

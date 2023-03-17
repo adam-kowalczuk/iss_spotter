@@ -35,17 +35,17 @@ const fetchCoordsByIP = function(ip, callback) {
     const parsedBody = JSON.parse(body);
 
     if (!parsedBody.success) {
-      const msg = `Success status was ${parsedBody.success}. Server message says: ${parsedBody.message} when fetching for IP ${parsedBody.ip}`; 
+      const msg = `Success status was ${parsedBody.success}. Server message says: ${parsedBody.message} when fetching for IP ${parsedBody.ip}`;
       callback(Error(msg), null);
       return;
     }
 
     const geocode = {latitude: parsedBody.latitude, longitude: parsedBody.longitude};
     callback(null, geocode);
-  })
+  });
 };
 
-module.exports = { 
+module.exports = {
   fetchMyIP,
   fetchCoordsByIP
- };
+};

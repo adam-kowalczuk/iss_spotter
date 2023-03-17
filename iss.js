@@ -39,7 +39,9 @@ const fetchCoordsByIP = function(ip, callback) {
       callback(Error(msg), null);
       return;
     }
-    callback(null, parsedBody);
+
+    const geocode = {latitude: parsedBody.latitude, longitude: parsedBody.longitude};
+    callback(null, geocode);
   })
 };
 
